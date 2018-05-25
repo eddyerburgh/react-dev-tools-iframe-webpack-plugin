@@ -1,10 +1,10 @@
 # react-dev-tools-iframe-webpack-plugin
 
-By default, React apps running in <iframe>s are not picked up by the React dev tools extension.
+By default, React apps running in iframes are not picked up by the React dev tools extension.
 
-For dev tools to pick up React apps in <iframes>, you need to add code that sets the dev tools hook to the parent window, but the code must run before the React code runs.
+For dev tools to pick up React apps in iframes, you need to add code that sets the dev tools hook to the parent window, but the code must run before the React code runs.
 
-This plugin adds the code to set the dev toopls hook before the React code runs.
+This plugin adds the code to set the dev tools hook before the React code runs.
 
 ## Usage
 
