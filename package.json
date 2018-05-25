@@ -1,0 +1,25 @@
+{
+  "name": "react-dev-tools-iframe-webpack-plugin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "files": ["index.js"],
+  "author": "Edd Yerburgh",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write *.js",
+    "precommit": "lint-staged",
+    "publish": "semantic-release",
+    "test": "webpack --mode development --config webpack.conf.js"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^7.1.2",
+    "prettier": "^1.12.1",
+    "semantic-release": "^15.5.0",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.4"
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": ["prettier --write", "git add"]
+  }
+}
