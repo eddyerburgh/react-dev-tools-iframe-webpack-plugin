@@ -9,7 +9,8 @@
     "format": "prettier --write *.js",
     "precommit": "lint-staged",
     "publish": "semantic-release",
-    "test": "webpack --mode development --config webpack.conf.js"
+    "test": "webpack --mode development --config webpack.conf.js",
+    "test:hot": "webpack-dev-server"
   },
   "devDependencies": {
     "husky": "^0.14.3",
@@ -17,7 +18,8 @@
     "prettier": "^1.12.1",
     "semantic-release": "^15.5.0",
     "webpack": "^4.8.3",
-    "webpack-cli": "^2.1.4"
+    "webpack-cli": "^2.1.4",
+    "webpack-dev-server": "^3.1.4"
   },
   "lint-staged": {
     "*.{js,json,css,md}": ["prettier --write", "git add"]

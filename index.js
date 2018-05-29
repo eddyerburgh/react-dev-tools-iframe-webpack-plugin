@@ -7,7 +7,12 @@ const str = [
 ];
 
 ReactDevToolsIFrameInjectPlugin.prototype.apply = function(compiler) {
+  let hasRun = false;
+
   compiler.hooks.emit.tap("ReactDevToolsIframe", function(compilation) {
+    if (hasRun) {
+      return;
+    }
     for (i = str.length - 1; i >= 0; i--) {
       Object.keys(compilation.assets).forEach(key => {
         if (!key.match(/.js$/)) {
@@ -16,6 +21,8 @@ ReactDevToolsIFrameInjectPlugin.prototype.apply = function(compiler) {
         compilation.assets[key]._source.children.unshift(str[i]);
       });
     }
+
+    hasRun = true;
   });
 };
 
