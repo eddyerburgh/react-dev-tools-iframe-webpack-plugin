@@ -6,11 +6,11 @@
   "author": "Edd Yerburgh",
   "license": "MIT",
   "scripts": {
-    "format": "prettier --write *.js",
+    "format": "prettier --write '**/*.js'",
     "precommit": "lint-staged",
     "publish": "semantic-release",
     "test": "webpack --mode development --config webpack.conf.js",
-    "test:hot": "webpack-dev-server"
+    "test:hot": "webpack-dev-server --config webpack.conf.js"
   },
   "devDependencies": {
     "husky": "^0.14.3",
