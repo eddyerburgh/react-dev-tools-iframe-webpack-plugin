@@ -9,7 +9,7 @@
     "format": "prettier --write '**/*.js'",
     "precommit": "lint-staged",
     "publish": "semantic-release",
-    "test": "webpack --mode development --config webpack.conf.js",
+    "test": "webpack --config webpack.conf.js",
     "test:hot": "webpack-dev-server --config webpack.conf.js"
   },
   "devDependencies": {

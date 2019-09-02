@@ -1,5 +1,6 @@
 var ReactDevToolsIframePlugin = require("./");
 
 module.exports = {
-  plugins: [new ReactDevToolsIframePlugin()]
+  plugins: [new ReactDevToolsIframePlugin()],
+  mode: "development"
 };
